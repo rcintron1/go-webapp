@@ -74,6 +74,7 @@ func init() {
 }
 
 func productHandler(w http.ResponseWriter, r *http.Request) {
+	println(r.Method)
 	switch r.Method {
 	case http.MethodGet:
 		productJson, err := json.Marshal(productList)
